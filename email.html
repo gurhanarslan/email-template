@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/regular.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+     .d-block {
+        display: block !important;
+     }
+      html {
+        box-sizing: border-box;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      body {
+        background-color: #f0eeed;
+      }
+      #capture {
+        display: none;
+      }
+      .messages {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: center;
+
+      }
+      .message-box {
+        border-radius: 13px;
+        margin: 5px;
+        padding: 15px;
+        outline: 1px solid #c92c6d;
+        box-shadow: #c92c6d6d 0px 3px 8px;
+        background-color: white;
+        border: 1px solid #c92c6d;
+        margin: 15px 0;
+        max-width: 400px;
+        display: inline-block;
+        width: 100%;
+      }
+      section {
+        background-color: #f0eeed;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        color: #332c39;
+      }
+      ol li {
+        line-height: 2;
+      }
+      .form {
+        width: 100%;
+        max-width: 450px;
+        padding: 60px 30px;
+        border-radius: 13px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        background-color: white;
+      }
+      h1 {
+        font-size: 1rem;
+      }
+      input , textarea{
+        width: 100%;
+        line-height: 1.25rem;
+        font-size: 0.875rem;
+        border: 1px solid #609ea2;
+        border-radius: 13px;
+        color: #332c39;
+        padding: 10px 40px;
+        margin: 7px 0;
+      }
+      .input-body {
+        position: relative;
+      }
+      .input-body i {
+        position: absolute;
+        left: 15px;
+        top: 20px;
+        color: #609ea2;
+      }
+      input:focus {
+        outline: 1px solid #c92c6d;
+        box-shadow: #c92c6d6d 0px 3px 8px;
+        border: 1px solid #c92c6d;
+      }
+      input:focus-within + i {
+        color: #c92c6d;
+      }
+      input::placeholder {
+        color: #332c39;
+        opacity: 0.4;
+      }
+      button, a.button {
+        padding: 10px 24px;
+        border-radius: 13px;
+        border: none;
+        line-height: 1.25rem;
+        background-color: #c92c6d;
+        color: white;
+      }
+      button:hover, a.button:hover {
+        cursor: pointer;
+        transition: 0.4s ease;
+        transform: translateY(-6px);
+      }
+
+      .button-group {
+        margin-top: 15px;
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+      }
+      canvas {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+        <form id="submit-btn" class="form">
+            <div>
+                <h1>BTWOMARINE E-mail imza oluştur</h1>
+                <div>
+                  <div class="input-body">
+                    <i class="fas fa-user"></i>
+                    <input required type="text" id="name" placeholder="Ad Soyad" />
+                  </div>
+                  <div class="input-body">
+                    <i class="fas fa-id-card-alt"></i>
+                    <input required type="text" id="prof" placeholder="Ünvanı" />
+                  </div>
+                  <div class="input-body">
+                    <i class="fas fa-envelope"></i>
+                    <input required type="email" id="email" placeholder="E-mail Adresiniz" />
+                  </div>
+                  <div class="input-body">
+                    <i class="fas fa-phone"></i>
+                    <input required type="tel" id="tel" placeholder="Telefon Numaranız" />
+                  </div>
+                </div>
+                <div class="button-group">
+                  <button type="submit">İmza oluştur</button>
+                </div>
+              </div>
+        </form>
+    </section>
+    <div id="capture">
+        <div id="sign">
+            <table style="font-family: sans-serif; width: 100%;" cellspacing="0" cellpadding="0"> <tbody> <tr> <td style="width: 100%;" valign="center"> <table cellspacing="0" cellpadding="0" align="center"> <tbody> <tr> <td align="center"> <table style="background-color: transparent;" width="900" cellspacing="0" cellpadding="0" align="center"> <tbody> <tr> <td style="background-color: #034171; padding: 30px 30px 0 30px;" align="left" bgcolor="#034171"><!-- [if mso]><table width="860" cellpadding="0" cellspacing="0"><tr><td width="420" valign="center"><![endif]--> <table cellspacing="0" cellpadding="0" align="left"> <tbody> <tr> <td align="left" width="420"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="center"><a target="_blank"><img style="display: block;" src="https://zmlnth.stripocdn.email/content/guids/CABINET_38e46255e2066ae1b12d8edff650f1d9af07ccf0afc08199049d9fb221092510/images/asset_2.png" alt="" width="380" /></a></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- [if mso]></td><td width="20"></td><td width="420" valign="center"><![endif]--> <table cellspacing="0" cellpadding="0" align="right"> <tbody> <tr> <td align="left" width="420"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left"> <p>&nbsp;</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- [if mso]></td></tr></table><![endif]--></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <table cellspacing="0" cellpadding="0" align="center"> <tbody> <tr> <td align="center"> <table style="background-color: #034171; padding: 0 30px 0 30px;" width="900" cellspacing="0" cellpadding="0" align="center" bgcolor="#034171"> <tbody> <tr> <td align="left"><!-- [if mso]><table width="860" cellpadding="0" cellspacing="0"><tr><td width="420" valign="center"><![endif]--> <table cellspacing="0" cellpadding="0" align="left"> <tbody> <tr> <td align="left" width="420"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left"> <p style="color: #ffffff; line-height: 150%; font-size: 26px; white-space: nowrap;"><span id="username"></span><br /><span style="font-size: 14px; color: #66cccc; white-space: nowrap;"><span id="profession"></span></span></p> </td> </tr> </tbody> </table> </td> </tr> <tr> <td align="left" width="270"> <table style="border: 9px solid transparent;" cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left" valign="center"><a target="_blank"><img style="display: block;" src="https://zmlnth.stripocdn.email/content/guids/CABINET_38e46255e2066ae1b12d8edff650f1d9af07ccf0afc08199049d9fb221092510/images/icon_awesomephonealt.png" alt="" width="22" /></a></td> <td align="left"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left"> <p style="margin-left: 10px; color: #ffffff;"><span id="phonenumber"></span></p> </td> </tr> </tbody> </table> </td> </tr> <tr> <td align="left" valign="center"><a target="_blank"><img style="display: block;" src="https://zmlnth.stripocdn.email/content/guids/CABINET_38e46255e2066ae1b12d8edff650f1d9af07ccf0afc08199049d9fb221092510/images/icon_ioniciosmail.png" alt="" width="22" /></a></td> <td align="left"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left"> <p style="margin-left: 10px; color: #ffffff;"><span id="emailaddress"></span></p> </td> </tr> </tbody> </table> </td> </tr> <tr> <td align="center" valign="center"><a target="_blank"><img style="display: block;" src="https://zmlnth.stripocdn.email/content/guids/CABINET_38e46255e2066ae1b12d8edff650f1d9af07ccf0afc08199049d9fb221092510/images/icon_materiallocationon.png" alt="" width="16" /></a></td> <td align="left"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left"> <p style="margin-left: 10px; color: #ffffff;">Bodrum-Turkey</p> </td> </tr> </tbody> </table> </td> </tr> <tr> <td align="left" valign="center"><a target="_blank"><img style="display: block;" src="https://zmlnth.stripocdn.email/content/guids/CABINET_38e46255e2066ae1b12d8edff650f1d9af07ccf0afc08199049d9fb221092510/images/web.png" alt="" width="21" /></a></td> <td align="left"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left"> <p style="margin-left: 10px; color: #ffffff;">www.btwomarine.com</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- [if mso]></td><td width="20"></td><td width="420" valign="center"><![endif]--> <!-- [if mso]></td></tr></table><![endif]--></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <table cellspacing="0" cellpadding="0" align="center"> <tbody> <tr> <td align="center"> <table style="background-color: #034171; padding: 0 30px;" width="900" cellspacing="0" cellpadding="0" align="center" bgcolor="#034171"> <tbody> <tr> <td align="left"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="center" valign="center" width="840"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="center"><a target="_blank"><img style="display: block;" src="https://zmlnth.stripocdn.email/content/guids/CABINET_38e46255e2066ae1b12d8edff650f1d9af07ccf0afc08199049d9fb221092510/images/asset_15.png" alt="" width="840" /></a></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <tr> <td align="left"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="center" valign="center" width="860"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left"> <h2 style="color: #ffffff;">Yatbu'yu Şimdi Keşfetmeye Başlayın!</h2> </td> </tr> <tr> <td align="left"> <p style="color: #ffffff;">Yatbu ile bir&ccedil;ok kategoride kolayca ilan oluşturabilir, milyonlarca ilan arasından hayalinizdeki deniz aracına ve ihtiyacınıza uygun ekipmanlara ulaşabilirsiniz.&nbsp;</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> <tr> <td align="left"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="center" valign="center" width="860"> <table cellspacing="0" width="100%" cellpadding="0"> <tbody> <tr> <td> <table style="padding: 20px 0;width:100%" cellspacing="0" cellpadding="0"> <tbody> <tr> <td style="padding-bottom: 10px; padding-top: 10px;" align="center" bgcolor="#ffffff" width="33.33%"><a style="color: #034171; font-size: 16px; font-weight: bold;" href="https://apps.apple.com/us/app/yatbu/id6444791831" target="_blank">App Store </a></td> <td style="border-left: 15px solid #034171; padding-bottom: 10px; padding-top: 10px;" align="center" bgcolor="#ffffff" width="33.33%"><a style="color: #034171; font-size: 16px; font-weight: bold;" href="https://play.google.com/store/apps/details?id=com.btwomarine.yatbu.android" target="_blank">Google Play </a></td> <td style="border-left: 15px solid #034171; padding-bottom: 10px; padding-top: 10px;" align="center" bgcolor="#ffffff" width="33.33%"><a style="color: #034171; font-size: 16px; font-weight: bold;" href="https://yatbu.com/" target="_blank">Yatbu.com </a></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <table cellspacing="0" cellpadding="0" align="center"> <tbody> <tr> <td align="center"> <table width="900" cellspacing="0" cellpadding="0" align="center" bgcolor="#ffffff"> <tbody> <tr> <td style="background-image: url('https://zmlnth.stripocdn.email/content/guids/CABINET_38e46255e2066ae1b12d8edff650f1d9af07ccf0afc08199049d9fb221092510/images/bg_q94.png'); background-repeat: no-repeat; background-position: left top; padding: 0 30px;" align="left"><!-- [if mso]><table width="840" cellpadding="0" cellspacing="0"><tr><td width="547" valign="center"><![endif]--> <table style="font-size: 14px;" cellspacing="0" cellpadding="0" align="left"> <tbody> <tr> <td align="center" valign="center" width="547"> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="left"> <p style="color: #fefcfc;">Daha yeşil bir &ccedil;evre i&ccedil;in bu mesajı yazdırmadan &ouml;nce l&uuml;tfen bir kez daha d&uuml;ş&uuml;n&uuml;n.<br />For a greener enviroment, please reconsider before printing out this document.<br /><br /></p> <p style="display: none; color: #fefcfc;">&nbsp;</p> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- [if mso]></td><td width="20"></td><td width="273" valign="center"><![endif]--> <table cellspacing="0" cellpadding="0" align="right"> <tbody> <tr> <td align="left" width="273"> <table cellspacing="0" width="100%" cellpadding="0"> <tbody> <tr> <td align="right"> <div style="margin-top: 2px;">&nbsp;</div> <table cellspacing="0" cellpadding="0"> <tbody> <tr> <td align="center" valign="center"><a style="margin-right: 10px;" href="https://www.facebook.com/profile.php?id=100081312786021" target="_blank"><img title="Facebook" src="https://zmlnth.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/facebook-rounded-white-bordered.png" alt="Fb" width="32" /></a></td> <td align="center" valign="center"><a href="https://www.instagram.com/yatbucom/" target="_blank"><img title="Instagram" src="https://zmlnth.stripocdn.email/content/assets/img/social-icons/rounded-white-bordered/instagram-rounded-white-bordered.png" alt="Inst" width="32" /></a></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table> <!-- [if mso]></td></tr></table><![endif]--></td> </tr> </tbody> </table> </td> </tr> </tbody> </table> </td> </tr> </tbody> </table>
+        </div>
+        <div class="messages">
+            <div class="message-box">
+                <h3>Gmail kısmına imza eklemek istenirse aşağıdaki adımlar izlenmeli</h3>
+                <ol>
+                    <li> <a target="_blank" href="https://html-online.com/editor/">https://html-online.com/editor/</a> sayfasına tıklayın. </li>
+                    <li> Aşağıdaki kod parçacığını sağ tarafa yapıştırın.</li>
+                    <li><button onclick="copyClipboard()">Kod parçacığını kopyalamak için tıklayın.</button> </li>
+                    <li> Sol tarafta görünen kısımı tamamını seçip kopyalayın.</li>
+                    <li> Gmail hesabınız açıp Ayarlar kısmında İmzalar kısmına kopyalan metni yapıştırın.</li>
+                </ol>
+            </div>
+            <div class="message-box">
+                <h3>Apple(MAC) kısmına imza eklemek istenirse aşağıdaki adımlar izlenmeli</h3>
+                <ol>
+                    <li> <a target="_blank" href="https://www.youtube.com/watch?v=hvwK8tyH5Dg">https://www.youtube.com/watch?v=hvwK8tyH5Dg</a> youtube videosundaki adımları takip edin. </li>
+                </ol>
+            </div>
+            <div class="message-box">
+                <h3>Apple(Iphone/Ipad) kısmına imza eklemek istenirse aşağıdaki adımlar izlenmeli</h3>
+                <ol>
+                    <li> <a target="_blank" href="https://html-online.com/editor/">https://html-online.com/editor/</a> sayfasına tıklayın. </li>
+                    <li> Aşağıdaki kod parçacığını sağ tarafa yapıştırın.</li>
+                    <li><button onclick="copyClipboard()">Kod parçacığını kopyalamak için tıklayın.</button> </li>
+                    <li> Sol tarafta görünen kısımı tamamını seçip kopyalayın.</li>
+                    <li> <a target="_blank" href="https://www.youtube.com/watch?v=uWW2PlUMuko">https://www.youtube.com/watch?v=uWW2PlUMuko</a> youtube videosundaki adımları takip edin. </li>
+                 </ol>
+            </div>
+            <textarea name="" id="sign-text" cols="30" rows="30"></textarea>
+        </div>
+    </div>
+    <script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+    <script>
+      let username = "";
+      let emailaddress = "";
+      function copyClipboard() {
+        navigator.clipboard.writeText(document.querySelector("#sign-text").value);
+      }
+      document.getElementById('submit-btn').addEventListener('submit', (e) => {
+        e.preventDefault();
+        document.querySelector("#username").innerHTML= document.querySelector("#name").value
+        document.querySelector("#profession").innerHTML= document.querySelector("#prof").value
+        document.querySelector("#emailaddress").innerHTML= document.querySelector("#email").value
+        document.querySelector("#phonenumber").innerHTML= document.querySelector("#tel").value
+        document.querySelector("#sign-text").innerHTML= document.querySelector("#sign").innerHTML.trim()
+        document.querySelector("#capture").classList.add('d-block');
+        setTimeout(() => {
+            document.querySelector("#capture").scrollIntoView({ behavior: 'smooth'})
+            copyClipboard();
+        }, 250);
+      });
+    
+    </script>
+  </body>
+</html>
